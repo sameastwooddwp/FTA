@@ -1,44 +1,67 @@
-
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-  GOV.UK Prototype Kit
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        Thiss kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
 
-      <h2 class="govuk-heading-m">About this page</h2>
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Sign in
+          </h1>
+        </legend>
 
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
 
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
+<form class="form" action="details" method="post">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-town">
+            User ID
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="address-town" name="address-town" type="text">
+        </div>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
-        <li>
-          <a href="https://design-system.service.gov.uk">
-            GOV.UK Design System
-          </a>
-        </li>
-      </ul>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-county">
+            Password
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="address-county" name="address-county" type="text">
+        </div>
+
+        <button type="submit" class="govuk-button">
+          Sign in
+        </button>
+  </form>
+
+
+      </fieldset>
+
+<h4 class="govuk-heading-s">Problems signing in</h4>
+      <ul class="govuk-list">
+  <li>
+    <a class="govuk-link" href="#">Forgotten password</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="#">Forgotten user ID</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="#">Need to create an account</a>
+  </li>
+</ul>
     </div>
-</div>
+  </div>
+
+
 
 {% endblock %}

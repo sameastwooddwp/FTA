@@ -10,66 +10,73 @@
 {% endblock %}
 
 {% block content %}
-<a href="work-list" class="govuk-back-link">Back</a>
+<a href="details" class="govuk-back-link">Back</a>
 
 <div class="case-header">
   <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
-    <span class="govuk-caption-l">Claimant’s details</span>
+    <span class="govuk-caption-l">Claimants details</span>
     Ralph Waters
   </h1>
 
   <table class="govuk-table" border="0">
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <td width="25%" class="govuk-table__cell"><span class="govuk-body govuk-!-font-weight-bold">Customer ID: </span>JC 1234</td>
-        <td class="govuk-table__cell"><span class="govuk-body govuk-!-font-weight-bold">Award length: </span>2 years</td>
-        <td width="18%" class="govuk-table__cell"><button type="submit" class="govuk-button">Accept renewal</button></td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell"><button type="submit" class="govuk-button">Reject renewal</button></td>
+    <tr class="govuk-table__row">
+        <td width="27%" class="govuk-table__cell"><span class="govuk-body govuk-!-font-weight-bold">Customer NI: </span>QQ123456C</td>
+        <td width="30%" class="govuk-table__cell"><span class="govuk-body govuk-!-font-weight-bold">Date of birth: </span>16 October 1975</td>
+        <td class="govuk-table__cell"><span class="govuk-body govuk-!-font-weight-bold">Award length: </span>5 years</td>
       </tr>
-    </thead>
-    </tbody>
   </table>
 
 <h3 class="govuk-heading-m">Prior scores</h3>
 
 <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-quarter">
-          <span class="bold-xxlarge">27</span>
+          <span class="bold-xxlarge">12</span>
           <span class="data-item bold-xsmall">prior daily living score</span>
         </div>
         <div class="govuk-grid-column-one-quarter">
-          <span class="bold-xxlarge">27</span>
+          <span class="bold-xxlarge">12</span>
           <span class="data-item bold-xsmall">prior mobility score</span>
         </div>
         <div class="govuk-grid-column-one-quarter">
-          <span class="bold-xxlarge">2 years</span>
+          <span class="bold-xxlarge">5 years</span>
           <span class="data-item bold-xsmall">prior award length</span>
         </div>
   </div>
 
-<p></p><p></p><p></p>
+  <p class="govuk-body govuk-!-margin-top-8"></p>
 
-  <h3 class="govuk-heading-m">Predicted scores</h3>
+
+  <h3 class="govuk-heading-m">Predicted decision</h3>
 
   <div class="govuk-grid-row">
           <div class="govuk-grid-column-one-quarter">
-            <span class="bold-xxlarge">27</span>
-            <span class="data-item bold-xsmall">prior daily living score</span>
+            <span class="bold-xxlarge">99.9%</span>
+            <span class="data-item bold-xsmall">likehood of automated renewal</span>
           </div>
           <div class="govuk-grid-column-one-quarter">
-            <span class="bold-xxlarge">27</span>
-            <span class="data-item bold-xsmall">prior mobility score</span>
+            <span class="bold-xxlarge">Renew</span>
+            <span class="data-item bold-xsmall">suggested automated decision</span>
           </div>
           <div class="govuk-grid-column-one-quarter">
-            <span class="bold-xxlarge">2 years</span>
-            <span class="data-item bold-xsmall">prior award length</span>
+            <span class="bold-xxlarge">5 years</span>
+            <span class="data-item bold-xsmall">predicted award length</span>
           </div>
     </div>
 
-
 <hr>
 
+<h2 class="govuk-heading-m">Prediction rational</h2>
+<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante nisi, maximus at mattis a, finibus rhoncus quam. Suspendisse ullamcorper purus ligula, et pretium mi pulvinar gravida.</p>
+
+<p class="govuk-body">Morbi eu aliquam mauris, ut tristique augue. Donec semper, sapien hendrerit venenatis gravida, justo diam semper elit, vitae vulputate eros libero eget nisi. Etiam luctus, lacus eu pharetra rhoncus, enim sapien venenatis tellus, a commodo ante nisl in augue.</p>
+
+<table class="govuk-table" border="0">
+  <tr class="govuk-table__row">
+      <td width="18%"><a href="check-your-answers-page"><button type="submit" class="govuk-button" align="bottom">Accept renewal</button></a></td>
+      <td width="1%"></td>
+      <td><a href="reject"><button type="submit" class="govuk-button">Reject renewal</button></a></td>
+    </tr>
+</table>
 
 
 {% endblock %}
