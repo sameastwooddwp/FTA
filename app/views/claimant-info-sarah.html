@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<a href="work-list" class="govuk-back-link">Back</a>
+
+<div class="case-header">
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+    <span class="govuk-caption-l">Claimant details</span>
+    Sarah Hield
+
+  </h1>
+
+  <table class="govuk-table" border="0">
+    <tr class="govuk-table__row">
+        <td width="40%" class="govuk-table__cell"><span class="govuk-body govuk-!-font-weight-bold">National Insurance number: </span>NN123456C</td>
+        <td width="30%" class="govuk-table__cell"><span class="govuk-body govuk-!-font-weight-bold">Daily living award: </span>Enhanced</td>
+        <td class="govuk-table__cell"><span class="govuk-body govuk-!-font-weight-bold">Mobility award: </span>Enhanced</td>
+      </tr>
+  </table>
+
+
+<h3 class="govuk-heading-m">Previous scores</h3>
+
+<div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="bold-xxlarge">84</span>
+          <span class="data-item bold-xsmall">Daily living score</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="bold-xxlarge">24</span>
+          <span class="data-item bold-xsmall">Mobility score</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="bold-xxlarge">5 years</span>
+          <span class="data-item bold-xsmall">Award length</span>
+        </div>
+  </div>
+
+  <p class="govuk-body govuk-!-margin-top-8"></p>
+
+
+  <h3 class="govuk-heading-m">Predicted decision</h3>
+
+  <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="bold-xxlarge">84</span>
+            <span class="data-item bold-xsmall">Predicted daily living score</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="bold-xxlarge">24</span>
+            <span class="data-item bold-xsmall">Predicted mobility score</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="bold-xxlarge">2 years</span>
+            <span class="data-item bold-xsmall">Predicted award length</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="bold-xxlarge">100%</span>
+            <span class="data-item bold-xsmall">Decision accuracy</span>
+          </div>
+
+    </div>
+
+
+  <p class="govuk-body govuk-!-margin-top-8"></p>
+
+<hr>
+
+<h2 class="govuk-heading-m">Suggested automated decision:</h2>
+<strong class="app-c-tag app-c-tag--success">EXTEND</strong>
+<hr>
+
+
+<h2 class="govuk-heading-m">Prediction reason</h2>
+<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante nisi, maximus at mattis a, finibus rhoncus quam. Suspendisse ullamcorper purus ligula, et pretium mi pulvinar gravida.</p>
+
+<p class="govuk-body">Morbi eu aliquam mauris, ut tristique augue. Donec semper, sapien hendrerit venenatis gravida, justo diam semper elit, vitae vulputate eros libero eget nisi. Etiam luctus, lacus eu pharetra rhoncus, enim sapien venenatis tellus, a commodo ante nisl in augue.</p>
+
+
+
+<a href="check-your-answers-page-sarah"><button type="submit" class="govuk-button" align="bottom">Extend award</button></a>
+<p><a class="govuk-link" href="reject" align="top">Refer for assessment</a></p>
+
+{% endblock %}
